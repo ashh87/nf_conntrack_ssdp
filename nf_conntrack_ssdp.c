@@ -108,7 +108,7 @@ static int ssdp_help(struct sk_buff *skb,
 	expect->class = NF_CT_EXPECT_CLASS_DEFAULT;
 	expect->helper = NULL;
 	
-	nf_ct_expect_related(expect);
+	nf_ct_expect_related(expect, 0);
 	nf_ct_expect_put(expect);
 	
 	return NF_ACCEPT;
